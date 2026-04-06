@@ -1,5 +1,5 @@
 {
-  "name": "HR Platform",
-  "description": "HR platform for managing candidates and skills (Java Spring Boot + React)",
+  "name": "hr-platform",
+  "description": "HR platforma za upravljanje kandidatima i vestinama",
   "requestFramePermissions": []
 }

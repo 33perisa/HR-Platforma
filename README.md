@@ -1,20 +1,39 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# HR Platforma - Upravljanje kandidatima i veštinama
 
-# Run and deploy your AI Studio app
+Ovaj projekat je razvijen kao rešenje za HR platformu koja omogućava praćenje kandidata za posao i njihovih veština.
 
-This contains everything you need to run your app locally.
+## Tehnologije
 
-View your app in AI Studio: https://ai.studio/apps/1191b93c-acac-408f-94c0-5ae3c4460a61
+- **Backend:** Java 17, Spring Boot, Spring Data JPA, H2 Database
+- **Frontend:** React, Tailwind CSS, Axios, Lucide React
+- **Dokumentacija:** Swagger UI (OpenAPI)
 
-## Run Locally
+## Struktura projekta
 
-**Prerequisites:**  Node.js
+- `java-backend/`: Izvorni kod za Spring Boot aplikaciju.
+- `src/`: React frontend aplikacija.
+- `public/`: Statički resursi za frontend.
 
+## Kako pokrenuti aplikaciju
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 1. Pokretanje Backenda
+1. Otvorite folder `java-backend` u vašem IDE-u (IntelliJ IDEA ili Eclipse).
+2. Sačekajte da Maven preuzme sve zavisnosti.
+3. Pokrenite glavnu klasu `HrPlatformApplication.java`.
+4. Backend će biti dostupan na `http://localhost:8080`.
+5. Swagger dokumentaciju možete videti na `http://localhost:8080/swagger-ui.html`.
+
+### 2. Pokretanje Frontenda
+1. U korenskom folderu projekta otvorite terminal.
+2. Pokrenite komandu `npm install` da instalirate potrebne pakete.
+3. Pokrenite komandu `npm run dev` da startujete React aplikaciju.
+4. Aplikacija će biti dostupna na `http://localhost:3000`.
+
+## Funkcionalnosti
+
+- Dodavanje novih kandidata sa osnovnim informacijama (ime, email, telefon, datum rođenja).
+- Dodavanje novih veština u sistem.
+- Povezivanje veština sa kandidatima.
+- Pretraga kandidata po imenu (case-insensitive).
+- Brisanje kandidata iz sistema.
+- Real-time ažuriranje liste kandidata.
