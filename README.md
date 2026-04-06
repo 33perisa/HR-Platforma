@@ -37,3 +37,11 @@ Ovaj projekat je razvijen kao rešenje za HR platformu koja omogućava praćenje
 - Pretraga kandidata po imenu (case-insensitive).
 - Brisanje kandidata iz sistema.
 - Real-time ažuriranje liste kandidata.
+
+## Komentar o najzahtevnijem delu zadatka
+
+Najzanimljiviji, a ujedno i najzahtevniji deo zadatka za mene je bio rad sa **Many-to-Many** vezom između entiteta `Candidate` i `Skill`. 
+
+Prvobitno sam razmišljao da veštine budu samo običan niz stringova unutar tabele kandidata, ali sam odlučio da ih implementiram kao poseban entitet. Razlog za ovu odluku je bolja struktura baze podataka – na ovaj način se izbegava dupliranje podataka i omogućava se lakša pretraga kandidata po specifičnim veštinama u budućnosti. 
+
+Najveći izazov je bio pravilno mapiranje ove veze u Spring Boot-u (korišćenjem `@ManyToMany` i `@JoinTable` anotacija) i osiguravanje da se podaci ispravno čuvaju i brišu bez narušavanja integriteta baze. Na frontendu je takođe bilo zanimljivo rešiti dinamičko dodeljivanje veština kandidatima preko padajućeg menija, gde se nakon svakog dodeljivanja lista odmah osvežava bez ponovnog učitavanja cele stranice.
