@@ -1,0 +1,5 @@
+{
+  "name": "HR Platform",
+  "description": "HR platform for managing candidates and skills (Java Spring Boot + React)",
+  "requestFramePermissions": []
+}
